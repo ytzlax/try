@@ -1,2 +1,6 @@
 const b=6;
-var e=6+5;
+let e=b+5;
+
+function ee(){
+    console.log('');
+}
