@@ -1,18 +1,16 @@
-name: njsscan
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+name: reviewdog
+on: [pull_request]
 jobs:
-  njsscan:
+  eslint:
+    name: runner / eslint
     runs-on: ubuntu-latest
-    name: njsscan check
+    permissions:
+      contents: read
+      pull-requests: write 
     steps:
-    - name: Checkout the code
-      uses: actions/checkout@v2
-    - name: nodejsscan scan
-      id: njsscan
-      uses: ajinabraham/njsscan-action@master
-      with:
-        args: '.'
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review # Change reporter.
+          eslint_flags: 'src/'
