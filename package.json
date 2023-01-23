@@ -1,0 +1,22 @@
+{
+  "name": "try",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytzlax/try.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ytzlax/try/issues"
+  },
+  "homepage": "https://github.com/ytzlax/try#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0"
+  }
+}
