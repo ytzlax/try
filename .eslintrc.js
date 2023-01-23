@@ -11,6 +11,7 @@ module.exports = {
     'sourceType': 'module',
   },
   'rules': {
-    "no-const-assign":"error"
+    "no-const-assign":"error",
+    "strict": ["error", "global"]
   },
 };
